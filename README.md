@@ -2,7 +2,7 @@
 1. Problem Statement:
 
 
-Stroke is a major public health concern that can lead to long-term health issues if not identified or treated early. Preventative measures are equally important in reducing stroke risk. The objective of this project is to develop multiple predictive models that estimate the liklihood of a stroke occuring and to determine whether clinical risk factors or lifestyle related factors provide a strong predictive power. A successful model could identify high-risk individuals and prioritize preventative care or extensive monitoring. 
+Stroke is a major public health concern that can lead to long-term health issues if not identified or treated early. Preventative measures are equally important in reducing stroke risk. The objective of this project is to develop multiple predictive models that estimate the likelihood of a stroke occurring and to determine whether clinical risk factors or lifestyle related factors provide a strong predictive power. A successful model could identify high-risk individuals and prioritize preventative care or extensive monitoring. 
 
 2. Model Outcomes: 
 
@@ -12,7 +12,7 @@ This project is formulated as a supervised binary classification problem, where 
 3. Data Acquisition:
 
 
-The analysis uses a publicaly availble stroke prediction dataset, which contains demographic, clinical and lifestyle information. The variables included are: age, hypertension, heart disease, body mass (BMI), average glucose level, work type and smoking status. The dataset is highly imbalanced, with stroke cases representing approximately 5% of observations. Exploratory data analysis and visualizations were conducted to examine variable distributions, class imbalance, and evaluate the datasets ability to predict stroke accurately. This influenced the type of modeling that would be done. 
+The analysis uses a publicly available stroke prediction dataset, which contains demographic, clinical and lifestyle information. The variables included are: age, hypertension, heart disease, body mass (BMI), average glucose level, work type and smoking status. The dataset is highly imbalanced, with stroke cases representing approximately 5% of observations. Exploratory data analysis and visualizations were conducted to examine variable distributions, class imbalance, and evaluate the dataset's ability to predict stroke accurately. This influenced the type of modeling that would be done. 
  
 4. Data Preparation:
 
@@ -23,12 +23,12 @@ To support direct comparison between the type of risk factors, two seperate feat
 
 - Clinical Features: representing medical risk factors
 
-- Lifestyle Features: representing behaviorial and demographic factors 
+- Lifestyle Features: representing behavioral and demographic factors 
 
 Model Selection:
-Multiple supervised learning algorithms were trained and evaluate to compare both algorithmic performance and predictive values of different feature groups 
+Multiple supervised learning algorithms were trained and evaluated to compare both algorithmic performance and predictive values of different feature groups 
 
-First two baseline models were trained:
+First two baseline models were trained using specific feature sets:
 
 - Random Forest Classifier:
 This was selected for its ability to capture the nonlinear relationship between the target variables and the other factors, and its ability to be insensitive to extreme values and skewness.
@@ -43,7 +43,7 @@ Then, two additional models were trained using constrained feature sets.
 - A Logistic Regression model was trained using lifestyle features only.
 
 These feature specific models were treated as independent models rather than tuning steps. The purpose of doing so was to isolate and compare predictive strengths of clinical vs lifestyle factors under the same modeling techniques, and evaluate their predictive ability. 
-To further improvide performance with the Random Forest approach, grid search hyperparameter tuning with stratified five-dolf cross validation was applied. Grid search was used solely to refine model parameters of the clinical feature set. 
+To further improve performance with the Random Forest approach, grid search hyperparameter tuning with stratified five-fold cross validation was applied. Grid search was used solely to refine model parameters of the clinical feature set. 
 
 5. Model Evaluation:
 
@@ -53,10 +53,10 @@ Because stroke cases are rare in the dataset, overall accuracy was not used as t
 6. Results and Conclusion:
 
 
-Models that used clinical risk factors consistently performed better at identifying people at risk of a stroke compared to models that used only lifestyle factors. For instance, the clinical models correctly identifed a much higher proportion of stroke cases compared to any of the lifestyle models. 
+Models that used clinical risk factors consistently performed better at identifying people at risk of a stroke compared to models that used only lifestyle factors. For instance, the clinical models correctly identified a much higher proportion of stroke cases compared to any of the lifestyle models. 
 
-Baseline models that included all features also performed reasonably well, but seperating the features into clinical versus lifestyle revealed more information about what type of trained model was the most predictive. The lifestyle models detected fewer stroke cases, showing that behavorial and demographic factors alone are less informative. 
+Baseline models that included all features also performed reasonably well, but seperating the features into clinical versus lifestyle revealed more information about what type of trained model was the most predictive. The lifestyle models detected fewer stroke cases, showing that behavioral and demographic factors alone are less informative. 
 
-Tuning the settings of the clinical Random Forest model further proved its ability to identify high risk individuals, while tuning the lifestyle models would not have made a signifiant difference given their low performance. 
+Tuning the settings of the clinical Random Forest model further proved its ability to identify high risk individuals, while tuning the lifestyle models would not have made a significant difference given their low performance. 
 
-Overall, these results suggest that medical risk factros are the strongest predictors of stroke. More specifically, in this project, the Clinical Feature Set is the strongest predictor of stroke. 
+Overall, these results suggest that medical risk factors are the strongest predictors of stroke. More specifically, in this project, the Clinical Feature Set is the strongest predictor of stroke. 

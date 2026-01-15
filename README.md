@@ -1,4 +1,6 @@
 # Capstone-Stroke-Risk-Prediction-A-Comparison-of-Clinical-and-Lifestyle-Factors
+Yamini Sirobushanam 
+
 1. Problem Statement:
 
 
